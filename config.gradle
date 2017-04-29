@@ -16,6 +16,4 @@ ext.dependenceConfig = [
                 "keyPassword"  : 'zhangmy',
                 "storePassword": 'zhangmy',
         ],
-
-        MAVEN_URL                  : 'http://172.28.1.147:8081/nexus/content/repositories/thirdparty/',
 ]
