@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion dependenceConfig.compileSdkVersion
+    buildToolsVersion dependenceConfig.buildToolsVersion
+    defaultConfig {
+        applicationId "com.zhangmy.applyremotegradlesample"
+        minSdkVersion dependenceConfig.minSdkVersion
+        targetSdkVersion dependenceConfig.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile dependenceConfig.deps.'3rd-fastjson'
+    compile dependenceConfig.deps.'3rd-fresco'
+    compile dependenceConfig.deps.'3rd-okhttp'
+    debugCompile dependenceConfig.deps["3rd-leakcanary-android"]
+    releaseCompile dependenceConfig.deps["3rd-leakcanary-android-no-op"]
+}
