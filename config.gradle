@@ -1,11 +1,9 @@
 ext.dependenceConfig = [
-        // 编译环境配置
         compileSdkVersion          : 23,
         buildToolsVersion          : "24.0.0",
         minSdkVersion              : 15,
         targetSdkVersion           : 23,
 
-        // 依赖配置
         deps                       : [
                 "3rd-fastjson"                  : 'com.alibaba:fastjson:1.1.56.android',
                 "3rd-leakcanary-android"        : 'com.squareup.leakcanary:leakcanary-android:1.5.1',
@@ -14,7 +12,6 @@ ext.dependenceConfig = [
                 "3rd-okhttp"                    : 'com.squareup.okhttp3:okhttp:3.7.0',
         ],
 
-        // 签名配置
         signing                    : [
                 "keyAlias"     : 'zhangmy',
                 "keyPassword"  : 'zhangmy',
